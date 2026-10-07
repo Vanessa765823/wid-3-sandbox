@@ -1,4 +1,12 @@
+
+import {useState} from "react";
+// wir importieren use State "Hook" / "Function"
+
 export default function App() {
+  const [counter,setCounter] =useState(0); //Hook, immer Default Wert definieren
+
+  
+  
 
   function handleClick (){
     // man könnte noch weitere Nebenfunktionen etc. aufrufen, Nebeneffekte etc.
@@ -24,12 +32,21 @@ export default function App() {
           Klick mich auch
           </button> */}
 
-      <input onChange={(e)=> {
+      {/*<input onChange={(e)=> {
         console.log(e.target.value);
       }}
       type = "text"
 
-      ></input>
+      ></input>*/}  
+
+        <button
+        onClick={() => {
+          setCounter(counter +1);
+            
+            console.log(counter);
+          }}>
+          Like
+        </button>
 
     </div>
   );
